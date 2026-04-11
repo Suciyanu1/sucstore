@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="lg:hidden p-2 text-gray-600 hover:text-black transition-colors"
             onClick={() => setIsMenuOpen(true)}
           >
@@ -53,14 +53,14 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             {categories.map((category) => (
               <div key={category.id} className="group relative py-2">
-                <Link 
+                <Link
                   to={`/category/${category.slug}`}
                   className="text-sm font-medium text-gray-700 hover:text-black flex items-center gap-1 transition-colors"
                 >
                   {category.name}
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
+
                 {/* Dropdown */}
                 <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-gray-100">
                   {category.subCategories.map((sub) => (
@@ -79,7 +79,7 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <button 
+            <button
               className="p-2 text-gray-600 hover:text-black transition-colors"
               onClick={() => setIsSearchOpen(true)}
             >
@@ -110,7 +110,7 @@ export default function Navbar() {
         "fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 lg:hidden",
         isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
       )} onClick={() => setIsMenuOpen(false)}>
-        <div 
+        <div
           className={cn(
             "fixed inset-y-0 left-0 w-full max-w-xs bg-white shadow-2xl transition-transform duration-300 transform",
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
@@ -124,11 +124,11 @@ export default function Navbar() {
                 <X size={24} />
               </button>
             </div>
-            
+
             <div className="flex-1 overflow-y-auto">
               {categories.map((category) => (
                 <div key={category.id} className="mb-6">
-                  <Link 
+                  <Link
                     to={`/category/${category.slug}`}
                     className="text-lg font-bold mb-3 block"
                     onClick={() => setIsMenuOpen(false)}
@@ -150,7 +150,7 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
-            
+
             <div className="pt-6 border-top border-gray-100 mt-auto">
               <Link to="/track-order" className="text-sm text-gray-500 hover:text-black block py-2" onClick={() => setIsMenuOpen(false)}>Track Order</Link>
               <Link to="/about" className="text-sm text-gray-500 hover:text-black block py-2" onClick={() => setIsMenuOpen(false)}>About Us</Link>
@@ -171,8 +171,8 @@ export default function Navbar() {
             </button>
           </div>
           <form onSubmit={handleSearch} className="relative">
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Search for products, brands..."
               className="w-full text-3xl sm:text-5xl font-light border-b-2 border-gray-100 py-4 focus:outline-none focus:border-black transition-colors"
               autoFocus={isSearchOpen}
@@ -187,8 +187,8 @@ export default function Navbar() {
             <p className="text-sm text-gray-400 uppercase tracking-widest mb-4">Popular Categories</p>
             <div className="flex flex-wrap gap-3">
               {categories.map(cat => (
-                <Link 
-                  key={cat.id} 
+                <Link
+                  key={cat.id}
                   to={`/category/${cat.slug}`}
                   className="px-6 py-2 rounded-full border border-gray-200 hover:border-black transition-colors"
                   onClick={() => setIsSearchOpen(false)}

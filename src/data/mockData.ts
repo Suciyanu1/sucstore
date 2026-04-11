@@ -12,7 +12,7 @@ export interface Product {
   reviewsCount: number;
   stock: number;
   isFeatured?: boolean;
-  isNew?: boolean;
+  isNew?: boolean; 
   variants?: {
     type: 'size' | 'color';
     options: string[];
