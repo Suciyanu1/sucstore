@@ -63,6 +63,17 @@ export const categories: Category[] = [
       { name: 'Decor', slug: 'decor' },
       { name: 'Kitchen', slug: 'kitchen' }
     ]
+  },
+  {
+    id: '4',
+    name: 'Phones',
+    slug: 'phones',
+    image: 'https://picsum.photos/seed/home/600/400',
+    subCategories: [
+      { name: 'Samsung', slug: 'samsung' },
+      { name: 'Apple', slug: 'apple' },
+      { name: 'Xiaomi', slug: 'xiaomi' }
+    ]
   }
 ];
 
