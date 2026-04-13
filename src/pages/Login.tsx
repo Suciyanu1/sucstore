@@ -105,13 +105,24 @@ export default function Login() {
           </button>
         </form>
         
-        <div className="text-center mt-6">
-          <button 
-            onClick={() => navigate('/')}
-            className="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-black transition-colors"
-          >
-            Back to Storefront
-          </button>
+        <div className="text-center mt-6 space-y-4">
+          <p className="text-sm text-gray-500">
+            Don't have an account?{' '}
+            <button 
+              onClick={() => navigate('/register')}
+              className="font-bold text-black hover:text-orange-600 transition-colors"
+            >
+              Register here
+            </button>
+          </p>
+          <div>
+            <button 
+              onClick={() => navigate('/')}
+              className="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-black transition-colors"
+            >
+              Back to Storefront
+            </button>
+          </div>
         </div>
       </div>
     </div>

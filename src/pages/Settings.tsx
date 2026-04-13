@@ -52,6 +52,7 @@ export default function Settings() {
               { name: 'Paystack', status: 'Connected', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Paystack_Logo.png' },
               { name: 'Flutterwave', status: 'Disconnected', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flutterwave_Logo.png/1200px-Flutterwave_Logo.png' },
               { name: 'Bank Transfer', status: 'Active', icon: null },
+              { name: 'Payment on Delivery', status: 'Active', icon: null },
             ].map((method) => (
               <div key={method.name} className="flex items-center justify-between p-6 bg-gray-50 rounded-3xl group">
                 <div className="flex items-center gap-4">

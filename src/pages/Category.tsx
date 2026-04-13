@@ -8,7 +8,7 @@ import { cn } from '../utils/cn';
 export default function Category() {
   const { categorySlug, subCategorySlug } = useParams();
   const [sortBy, setSortBy] = useState('newest');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000000]);
   
   const category = categories.find(c => c.slug === categorySlug);
   
@@ -91,15 +91,15 @@ export default function Category() {
                     <input 
                       type="range" 
                       min="0" 
-                      max="2000" 
-                      step="50"
+                      max="1000000" 
+                      step="1000"
                       value={priceRange[1]}
                       onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
                       className="w-full h-1 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-black"
                     />
                     <div className="flex justify-between text-sm font-bold">
-                      <span>$0</span>
-                      <span>${priceRange[1]}</span>
+                      <span>₦0</span>
+                      <span>₦{priceRange[1].toLocaleString()}</span>
                     </div>
                   </div>
                 </div>

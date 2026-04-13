@@ -22,6 +22,8 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import Login from './pages/Login';
+import Register from './pages/Register';
+import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './layouts/DashboardLayout';
 import DashboardHome from './pages/DashboardHome';
@@ -64,6 +66,7 @@ export default function App() {
 
         {/* Auth Routes */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* Protected Dashboard Routes */}
         <Route 
@@ -90,7 +93,7 @@ export default function App() {
         </Route>
 
         {/* 404 Fallback */}
-        <Route path="*" element={<div className="py-24 text-center text-4xl font-bold">404 - Page Not Found</div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
