@@ -94,3 +94,56 @@ export const useWishlistStore = create<WishlistStore>()(
     }
   )
 );
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'manager' | 'staff';
+}
+
+interface AuthStore {
+  user: User | null;
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+}
+
+export const useAuthStore = create<AuthStore>()(
+  persist(
+    (set) => ({
+      user: null,
+      isAuthenticated: false,
+      login: async (email, password) => {
+        // Simulate API call
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        
+        // Mock success for any email/password
+        const mockUser: User = {
+          id: 'u1',
+          email,
+          name: email.split('@')[0],
+          role: 'manager',
+        };
+        
+        set({ user: mockUser, isAuthenticated: true });
+      },
+      logout: () => set({ user: null, isAuthenticated: false }),
+    }),
+    {
+      name: 'auth-storage',
+    }
+  )
+);
+
+interface DashboardStore {
+  isSidebarOpen: boolean;
+  toggleSidebar: () => void;
+  setSidebarOpen: (open: boolean) => void;
+}
+
+export const useDashboardStore = create<DashboardStore>((set) => ({
+  isSidebarOpen: true,
+  toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+  setSidebarOpen: (open) => set({ isSidebarOpen: open }),
+}));

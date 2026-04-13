@@ -42,11 +42,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <Link to={`/product/${product.slug}`} className="block">
         {/* Image Container */}
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gray-100">
+        <div className="relative aspect-square overflow-hidden rounded-2xl bg-gray-50 p-6">
           <img 
             src={product.images[0]} 
             alt={product.name}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-110"
             referrerPolicy="no-referrer"
           />
           

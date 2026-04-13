@@ -108,27 +108,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-orange-600 mb-2 block">Curated</span>
-              <h2 className="text-4xl font-bold tracking-tighter">FEATURED PRODUCTS</h2>
-            </div>
-            <div className="flex gap-2">
-              {/* Custom arrows could go here */}
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Promotional Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-[500px] rounded-[40px] overflow-hidden flex items-center">
@@ -161,22 +140,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* New Arrivals */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-600 mb-2 block">Latest</span>
-            <h2 className="text-4xl font-bold tracking-tighter">NEW ARRIVALS</h2>
-          </div>
-          <Link to="/new-arrivals" className="text-sm font-bold border-b-2 border-black pb-1 hover:text-orange-600 hover:border-orange-600 transition-all">Shop All New</Link>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {newArrivals.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

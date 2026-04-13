@@ -39,8 +39,6 @@ export default function Footer() {
               <li><Link to="/category/electronics" className="text-gray-500 hover:text-black text-sm transition-colors">Electronics</Link></li>
               <li><Link to="/category/fashion" className="text-gray-500 hover:text-black text-sm transition-colors">Fashion</Link></li>
               <li><Link to="/category/home-living" className="text-gray-500 hover:text-black text-sm transition-colors">Home & Living</Link></li>
-              <li><Link to="/new-arrivals" className="text-gray-500 hover:text-black text-sm transition-colors">New Arrivals</Link></li>
-              <li><Link to="/featured" className="text-gray-500 hover:text-black text-sm transition-colors">Featured Products</Link></li>
             </ul>
           </div>
 
@@ -62,11 +60,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-500 text-sm">
                 <MapPin size={18} className="text-black shrink-0" />
-                <span>123 Commerce St, Suite 100<br />New York, NY 10001</span>
+                <span>123 Commerce St, Suite 100<br />Victoria Island, Lagos</span>
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Phone size={18} className="text-black shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234 (800) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Mail size={18} className="text-black shrink-0" />
