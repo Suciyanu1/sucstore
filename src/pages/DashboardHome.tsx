@@ -86,8 +86,8 @@ export default function DashboardHome() {
           <div className="flex items-center justify-between mb-8">
             <h3 className="font-bold uppercase tracking-widest text-sm">Sales Trends</h3>
             <select className="bg-gray-50 border-none rounded-xl px-4 py-2 text-xs font-bold outline-none">
-              <option>Last 7 Days</option>
-              <option>Last 30 Days</option>
+              <option>Last 7 Days.</option>
+              <option>Last 30 Days.</option>
             </select>
           </div>
           <div className="h-[300px] w-full">
