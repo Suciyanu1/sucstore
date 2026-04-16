@@ -34,6 +34,9 @@ import Orders from './pages/Orders';
 import Discounts from './pages/Discounts';
 import Reviews from './pages/Reviews';
 import Users from './pages/Users';
+import AddUser from './pages/AddUser';
+import DashboardCategories from './pages/DashboardCategories';
+import Messages from './pages/Messages';
 import DashboardShipping from './pages/DashboardShipping';
 import Banners from './pages/Banners';
 import Analytics from './pages/Analytics';
@@ -79,6 +82,7 @@ export default function App() {
         >
           <Route index element={<DashboardHome />} />
           <Route path="products" element={<DashboardProducts />} />
+          <Route path="categories" element={<DashboardCategories />} />
           <Route path="products/add" element={<AddProduct />} />
           <Route path="products/edit/:id" element={<AddProduct />} />
           <Route path="inventory" element={<Inventory />} />
@@ -86,6 +90,8 @@ export default function App() {
           <Route path="discounts" element={<Discounts />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="users" element={<Users />} />
+          <Route path="users/add" element={<AddUser />} />
+          <Route path="messages" element={<Messages />} />
           <Route path="shipping" element={<DashboardShipping />} />
           <Route path="banners" element={<Banners />} />
           <Route path="analytics" element={<Analytics />} />

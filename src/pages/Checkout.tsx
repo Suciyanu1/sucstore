@@ -166,6 +166,19 @@ export default function Checkout() {
               {shippingMethod === 'delivery' ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                   <div className="space-y-2 sm:col-span-2">
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Country</label>
+                    <select 
+                      required 
+                      defaultValue="Nigeria"
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-black outline-none appearance-none"
+                    >
+                      <option value="Nigeria">Nigeria</option>
+                      <option value="Ghana">Ghana</option>
+                      <option value="Kenya">Kenya</option>
+                      <option value="South Africa">South Africa</option>
+                    </select>
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Street Address</label>
                     <input required type="text" className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-black outline-none" />
                   </div>
@@ -262,7 +275,7 @@ export default function Checkout() {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Account Name</span>
-                          <span className="font-bold">SwiftShop Luxe Ltd</span>
+                          <span className="font-bold">sucstore Luxe Ltd</span>
                         </div>
                       </div>
 

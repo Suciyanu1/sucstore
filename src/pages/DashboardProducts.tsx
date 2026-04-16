@@ -113,17 +113,17 @@ export default function DashboardProducts() {
                     </span>
                   </td>
                   <td className="px-8 py-4 text-right">
-                    <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button className="p-2 hover:bg-white rounded-xl text-gray-400 hover:text-black transition-all shadow-sm">
+                    <div className="flex items-center justify-end gap-2">
+                      <button className="p-2 bg-gray-50 hover:bg-white rounded-xl text-gray-400 hover:text-black transition-all shadow-sm border border-gray-100">
                         <Eye size={16} />
                       </button>
                       <button 
                         onClick={() => navigate(`/dashboard/products/edit/${product.id}`)}
-                        className="p-2 hover:bg-white rounded-xl text-gray-400 hover:text-black transition-all shadow-sm"
+                        className="p-2 bg-gray-50 hover:bg-white rounded-xl text-gray-400 hover:text-black transition-all shadow-sm border border-gray-100"
                       >
                         <Edit2 size={16} />
                       </button>
-                      <button className="p-2 hover:bg-red-50 rounded-xl text-gray-400 hover:text-red-600 transition-all shadow-sm">
+                      <button className="p-2 bg-red-50/50 hover:bg-red-50 rounded-xl text-gray-400 hover:text-red-600 transition-all shadow-sm border border-red-50">
                         <Trash2 size={16} />
                       </button>
                     </div>

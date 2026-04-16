@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   Package, 
+  FolderTree,
   Database, 
   ShoppingBag, 
   Tag, 
@@ -12,6 +13,7 @@ import {
   Image as ImageIcon, 
   BarChart3, 
   Settings,
+  Mail,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -21,11 +23,13 @@ import { cn } from '../utils/cn';
 const navItems = [
   { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
   { icon: Package, label: 'Products', path: '/dashboard/products' },
+  { icon: FolderTree, label: 'Categories', path: '/dashboard/categories' },
   { icon: Database, label: 'Inventory', path: '/dashboard/inventory' },
   { icon: ShoppingBag, label: 'Orders', path: '/dashboard/orders' },
   { icon: Tag, label: 'Discounts', path: '/dashboard/discounts' },
   { icon: Star, label: 'Reviews', path: '/dashboard/reviews' },
   { icon: Users, label: 'Users', path: '/dashboard/users' },
+  { icon: Mail, label: 'Messages', path: '/dashboard/messages' },
   { icon: Truck, label: 'Shipping', path: '/dashboard/shipping' },
   { icon: ImageIcon, label: 'Banners', path: '/dashboard/banners' },
   { icon: BarChart3, label: 'Analytics', path: '/dashboard/analytics' },

@@ -27,7 +27,7 @@ export default function Register() {
       >
         <div className="text-center mb-10">
           <Link to="/" className="inline-block mb-8">
-            <span className="text-2xl font-black tracking-tighter uppercase">SwiftShop<span className="text-orange-600">.</span></span>
+            <span className="text-2xl font-black tracking-tighter uppercase">sucstore<span className="text-orange-600">.</span></span>
           </Link>
           <h1 className="text-3xl font-bold tracking-tight mb-2">Create an account</h1>
           <p className="text-gray-500">Join our community and start shopping.</p>

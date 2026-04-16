@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <Link to="/" className="text-2xl font-bold tracking-tighter text-black mb-6 block">
-              SWIFT<span className="text-orange-600">SHOP</span>
+            <Link to="/" className="text-2xl font-bold tracking-tighter text-black mb-6 block uppercase">
+              sucstore<span className="text-orange-600">.</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed mb-8">
               Premium e-commerce experience with a focus on quality, speed, and customer satisfaction. Discover our curated collection of products.
@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Mail size={18} className="text-black shrink-0" />
-                <span>hello@swiftshop.com</span>
+                <span>hello@sucstore.com</span>
               </li>
             </ul>
           </div>
@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-400 text-xs">
-            © {currentYear} SWIFTSHOP. All rights reserved.
+            © {currentYear} sucstore. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
             <Link to="/privacy" className="text-gray-400 hover:text-black text-xs transition-colors">Privacy Policy</Link>

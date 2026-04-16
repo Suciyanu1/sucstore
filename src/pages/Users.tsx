@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Plus, Users as UsersIcon, Mail, Shield, MoreVertical } from 'lucide-react';
 
 const mockUsers = [
@@ -8,6 +9,7 @@ const mockUsers = [
 ];
 
 export default function Users() {
+  const navigate = useNavigate();
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
@@ -15,7 +17,10 @@ export default function Users() {
           <h1 className="text-4xl font-bold tracking-tighter uppercase">Users</h1>
           <p className="text-gray-500 mt-1">Manage team members and their access levels.</p>
         </div>
-        <button className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-orange-600 transition-all shadow-xl shadow-gray-200">
+        <button 
+          onClick={() => navigate('/dashboard/users/add')}
+          className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-orange-600 transition-all shadow-xl shadow-gray-200"
+        >
           <Plus size={20} /> Add User
         </button>
       </div>

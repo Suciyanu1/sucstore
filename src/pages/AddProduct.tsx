@@ -25,8 +25,28 @@ export default function AddProduct() {
     stock: product?.stock || '',
   });
 
-  const [enableVariants, setEnableVariants] = useState(false);
-  const [variants, setVariants] = useState<Variant[]>([]);
+  const [enableVariants, setEnableVariants] = useState(product?.variants && product.variants.length > 0 || false);
+  const [variants, setVariants] = useState<Variant[]>(product?.variants || []);
+  const [images, setImages] = useState<string[]>(product?.images || []);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // In a real app, we would upload the file to a server
+      // Here we'll just create a local URL for preview
+      const url = URL.createObjectURL(file);
+      setImages([...images, url]);
+    }
+  };
+
+  const handleRemoveImage = (index: number) => {
+    setImages(images.filter((_, i) => i !== index));
+  };
 
   const handleAddVariant = () => {
     const newVariant: Variant = {
@@ -273,13 +293,34 @@ export default function AddProduct() {
           <section className="bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm space-y-8">
             <h3 className="font-bold uppercase tracking-widest text-sm border-b border-gray-50 pb-6">Product Media</h3>
             <div className="space-y-4">
-              <div className="aspect-square rounded-3xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 hover:text-black hover:border-black transition-all cursor-pointer group">
+              <input 
+                type="file" 
+                ref={fileInputRef} 
+                onChange={handleFileChange} 
+                className="hidden" 
+                accept="image/*"
+              />
+              <div 
+                onClick={handleUploadClick}
+                className="aspect-square rounded-3xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 hover:text-black hover:border-black transition-all cursor-pointer group"
+              >
                 <Upload size={32} className="mb-4 group-hover:-translate-y-1 transition-transform" />
                 <p className="text-xs font-bold uppercase tracking-widest">Upload Image</p>
                 <p className="text-[10px] mt-2">PNG, JPG up to 5MB</p>
               </div>
               <div className="grid grid-cols-3 gap-4">
-                {[1, 2, 3].map((i) => (
+                {images.map((img, i) => (
+                  <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center relative group overflow-hidden">
+                    <img src={img} alt={`Product ${i}`} className="w-full h-full object-cover" />
+                    <button 
+                      onClick={() => handleRemoveImage(i)}
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
+                ))}
+                {images.length < 4 && Array.from({ length: 4 - images.length - 1 }).map((_, i) => (
                   <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-300">
                     <Plus size={16} />
                   </div>

@@ -26,7 +26,7 @@ export default function Settings() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Store Name</label>
-              <input type="text" className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-black outline-none" placeholder="SwiftShop Luxe" />
+              <input type="text" className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-black outline-none" placeholder="sucstore Luxe" />
             </div>
             <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-1">Support Email</label>

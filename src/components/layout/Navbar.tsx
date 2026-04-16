@@ -46,7 +46,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tighter text-black">SWIFT<span className="text-orange-600">SHOP</span></span>
+            <span className="text-2xl font-bold tracking-tighter text-black uppercase">sucstore<span className="text-orange-600">.</span></span>
           </Link>
 
           {/* Desktop Menu */}
@@ -119,7 +119,7 @@ export default function Navbar() {
         >
           <div className="p-6 flex flex-col h-full">
             <div className="flex items-center justify-between mb-8">
-              <span className="text-xl font-bold tracking-tighter">SWIFTSHOP</span>
+              <span className="text-xl font-bold tracking-tighter uppercase">sucstore</span>
               <button onClick={() => setIsMenuOpen(false)} className="p-2">
                 <X size={24} />
               </button>

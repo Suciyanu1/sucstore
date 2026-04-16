@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { products } from '../data/mockData';
 import { cn } from '../utils/cn';
 
 export default function Inventory() {
+  const navigate = useNavigate();
   return (
     <div className="space-y-8">
       <div>
@@ -62,7 +64,12 @@ export default function Inventory() {
                     </span>
                   </td>
                   <td className="px-8 py-4 text-right">
-                    <button className="text-xs font-bold text-orange-600 hover:text-black transition-colors uppercase tracking-widest">Update</button>
+                    <button 
+                      onClick={() => navigate(`/dashboard/products/edit/${product.id}`)}
+                      className="text-xs font-bold text-orange-600 hover:text-black transition-colors uppercase tracking-widest"
+                    >
+                      Update
+                    </button>
                   </td>
                 </tr>
               ))}
