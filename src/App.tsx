@@ -98,7 +98,7 @@ export default function App() {
           <Route path="settings" element={<Settings />} />
         </Route>
 
-        {/* 404 Fallback */}
+        {/* 404 Fallback option */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
